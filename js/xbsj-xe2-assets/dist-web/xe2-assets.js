@@ -1,0 +1,1 @@
+xbsj['xr-utils'].registerScript();

@@ -1,0 +1,39 @@
+{
+    "data": [
+        {
+            "thumbnail": "/imagery/001.jpg",
+            "sceneObjectJson": {
+                "type": "CzmTerrain",
+                "name": "Cesium官方地形",
+                "provider": {
+                    "type": "CesiumTerrainProvider",
+                    "url": "ion://1",
+                    "requestVertexNormals": true
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/003.jpg",
+            "sceneObjectJson": {
+                "type": "CzmTerrain",
+                "name": "GH地形",
+                "provider": {
+                    "type": "GoogleEarthEnterpriseTerrainProvider",
+                    "url": "//183.223.249.238:7000",
+                    "metadata": "//183.223.249.238:7000"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/yun.png",
+            "sceneObjectJson": {
+                "type": "CzmTerrain",
+                "name": "星图地球Terrain-3D",
+                "provider": {
+                    "type": "CesiumTerrainProvider",
+                    "url": "//tiles1.geovisearth.com/base/v1/terrain?token={请输入token}"
+                }
+            }
+        }
+    ]
+}

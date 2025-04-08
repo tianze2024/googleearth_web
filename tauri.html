@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>ESObjectEditor - 数字孪生场景低代码编辑软件</title>
+  <script src="./xe2Loader.js"></script>
+  <script defer="defer" src="js/index.js"></script>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <div id="app"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // With the Tauri global script:
+      const invoke = window.__TAURI__.invoke
+      // This will wait for the window to load, but you could
+      // run this function on whatever trigger you want
+      invoke('close_splashscreen')
+    })
+  </script>
+</body>
+
+</html>

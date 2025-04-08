@@ -1,0 +1,779 @@
+{
+    "data": [
+        {
+            "thumbnail": "/imagery/001.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "默认离线影像",
+                "imageryProvider": {
+                    "type": "TileMapServiceImageryProvider",
+                    "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/003.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "天地图影像",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "https://{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                    "subdomains": ["t0", "t1", "t2", "t3", "t4", "t5", "t6", "t7"]
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/003.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "天地图地名",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "https://{s}.tianditu.gov.cn/cia_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=cia&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                    "subdomains": ["t0", "t1", "t2", "t3", "t4", "t5", "t6", "t7"]
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/003.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "天地图影像(经纬度切片)",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "https://{s}.tianditu.gov.cn/img_c/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=c&FORMAT=tiles&TILEMATRIX={zz}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                    "subdomains": [ "t0", "t1", "t2", "t3", "t4", "t5", "t6", "t7" ],
+                    "tilingScheme": { "type": "GeographicTilingScheme" },
+                    "customTags": { "zz": "(imageryProvider, x, y, level) => level + 1" }
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/003.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "天地图地名(经纬度切片)",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "https://{s}.tianditu.gov.cn/cia_c/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=cia&STYLE=default&TILEMATRIXSET=c&FORMAT=tiles&TILEMATRIX={zz}&TILEROW={y}&TILECOL={x}&tk=85c9d12d5d691d168ba5cb6ecaa749eb",
+                    "subdomains": [ "t0", "t1", "t2", "t3", "t4", "t5", "t6", "t7" ],
+                    "tilingScheme": { "type": "GeographicTilingScheme" },
+                    "customTags": { "zz": "(imageryProvider, x, y, level) => level + 1" }
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/003.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "谷歌影像",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "https://mt3v.gggis.com/maps/vt?lyrs=s&x={x}&y={y}&z={z}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/003.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "高德影像",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//webst02.is.autonavi.com/appmaptile?style=6&x={x}&y={y}&z={z}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/003.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "高德影像(纠偏至wgs84)",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "tilingScheme": {   
+                        "type": "ToWGS84WebMercatorTilingScheme"
+                    },
+                    "url": "//webst02.is.autonavi.com/appmaptile?style=6&x={x}&y={y}&z={z}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/004.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "OSM影像",
+                "imageryProvider": {
+                    "type": "OpenStreetMapImageryProvider",
+                    "url": "//a.tile.openstreetmap.org/"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/001.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "天地图影像",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//t3.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk={请输入token}",
+                    "subdomains": [
+                        "t0",
+                        "t1",
+                        "t2",
+                        "t3",
+                        "t4",
+                        "t5",
+                        "t6",
+                        "t7"
+                    ]
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/001.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "天地图影像(纠偏至GCJ02)",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "tilingScheme": {   
+                        "type": "ToGCJ02WebMercatorTilingScheme"
+                    },
+                    "url": "//t3.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk={请输入token}",
+                    "subdomains": [
+                        "t0",
+                        "t1",
+                        "t2",
+                        "t3",
+                        "t4",
+                        "t5",
+                        "t6",
+                        "t7"
+                    ]
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/005.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "天地图地图",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//t6.tianditu.com/DataServer?T=vec_w&x={x}&y={y}&l={z}&tk={请输入token}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/006.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "tianditu_image",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//t6.tianditu.com/DataServer?T=img_w&x={x}&y={y}&l={z}&tk={请输入token}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/007.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "tianditu_map_label",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//t3.tianditu.com/DataServer?T=cva_w&x={x}&y={y}&l={z}&tk={请输入token}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/2019_07_30_19_37_56.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "gaode_map",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//webrd04.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=7&x={x}&y={y}&z={z}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/2019_07_30_19_38_30.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "gaode_image",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//webst02.is.autonavi.com/appmaptile?style=6&x={x}&y={y}&z={z}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/2019_07_30_19_39_07.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "gaode_image_label",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//webst02.is.autonavi.com/appmaptile?style=8&x={x}&y={y}&z={z}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/2019_07_30_19_39_37.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "百度地图",
+                "imageryProvider": {
+                    "type": "BDImageryProvider",
+                    "wgs84": false,
+                    "url": "//online1.map.bdimg.com/onlinelabel/?qt=tile&x={x}&y={y}&z={z}&styles=pl&scaler=1&p=1"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/2019_07_30_19_39_37.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "百度地图(纠偏至wgs84)",
+                "imageryProvider": {
+                    "type": "BDImageryProvider",
+                    "wgs84": true,
+                    "url": "//online1.map.bdimg.com/onlinelabel/?qt=tile&x={x}&y={y}&z={z}&styles=pl&scaler=1&p=1"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/2019_07_30_19_40_08.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "百度影像",
+                "imageryProvider": {
+                    "type": "BDImageryProvider",
+                    "wgs84": false,
+                    "url": "https://server.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/2019_07_30_19_40_08.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "百度影像(纠偏至wgs84)",
+                "imageryProvider": {
+                    "type": "BDImageryProvider",
+                    "wgs84": true,
+                    "url": "https://server.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/2019_07_30_19_41_00.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "百度影像带标签",
+                "imageryProvider": {
+                    "type": "BDImageryProvider",
+                    "wgs84": false,
+                    "url": "//online6.map.bdimg.com/tile/?qt=tile&x={x}&y={y}&z={z}&styles=sl&v=020"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/2019_07_30_19_41_00.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "百度影像带标签(纠偏至wgs84)",
+                "imageryProvider": {
+                    "type": "BDImageryProvider",
+                    "wgs84": true,
+                    "url": "//online6.map.bdimg.com/tile/?qt=tile&x={x}&y={y}&z={z}&styles=sl&v=020"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/2019_07_30_19_41_53.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "百度地图午夜",
+                "imageryProvider": {
+                    "type": "BDImageryProvider",
+                    "wgs84": false,
+                    "url": "//api0.map.bdimg.com/customimage/tile?=&x={x}&y={y}&z={z}&scale=1&customid=midnight"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/2019_07_30_19_41_53.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "百度地图午夜(纠偏至wgs84)",
+                "imageryProvider": {
+                    "type": "BDImageryProvider",
+                    "wgs84": true,
+                    "url": "//api0.map.bdimg.com/customimage/tile?=&x={x}&y={y}&z={z}&scale=1&customid=midnight"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/2019_07_30_19_42_38.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "百度地图暗黑",
+                "imageryProvider": {
+                    "type": "BDImageryProvider",
+                    "wgs84": false,
+                    "url": "//api2.map.bdimg.com/customimage/tile?=&x={x}&y={y}&z={z}&scale=1&customid=dark"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/2019_07_30_19_42_38.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "百度地图暗黑(纠偏至wgs84)",
+                "imageryProvider": {
+                    "type": "BDImageryProvider",
+                    "wgs84": true,
+                    "url": "//api2.map.bdimg.com/customimage/tile?=&x={x}&y={y}&z={z}&scale=1&customid=dark"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/2019_07_30_19_43_08.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "openstreetmap",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//c.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/2019_07_30_19_44_57.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "mapbox_satellite",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//c.tiles.mapbox.com/v4/mapbox.satellite/{z}/{x}/{y}.png?access_token={请输入token}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/2019_07_30_19_45_41.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "mapbox_streets",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//c.tiles.mapbox.com/v4/mapbox.streets/{z}/{x}/{y}.png?access_token={请输入token}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/2019_07_30_19_45_59.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "mapbox_light",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//c.tiles.mapbox.com/v4/mapbox.light/{z}/{x}/{y}.png?access_token={请输入token}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/2019_07_30_19_46_46.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "mapbox_dark",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//c.tiles.mapbox.com/v4/mapbox.dark/{z}/{x}/{y}.png?access_token={请输入token}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/2019_07_30_19_47_21.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "mapbox_streets_satellite",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//c.tiles.mapbox.com/v4/mapbox.streets-satellite/{z}/{x}/{y}.png?access_token={请输入token}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/2019_07_30_19_47_53.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "mapbox_wheatpaste",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//c.tiles.mapbox.com/v4/mapbox.wheatpaste/{z}/{x}/{y}.png?access_token={请输入token}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/2019_07_30_19_48_30.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "mapbox_streets_basic",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//c.tiles.mapbox.com/v4/mapbox.streets-basic/{z}/{x}/{y}.png?access_token={请输入token}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/2019_07_30_19_49_08.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "mapbox_comic",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//c.tiles.mapbox.com/v4/mapbox.comic/{z}/{x}/{y}.png?access_token={请输入token}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/2019_07_30_19_49_49.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "mapbox_outdoors",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//c.tiles.mapbox.com/v4/mapbox.outdoors/{z}/{x}/{y}.png?access_token={请输入token}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/2019_07_30_19_50_21.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "mapbox_run_bike_hike",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//c.tiles.mapbox.com/v4/mapbox.run-bike-hike/{z}/{x}/{y}.png?access_token={请输入token}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/2019_07_30_19_50_58.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "mapbox_pencil",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//c.tiles.mapbox.com/v4/mapbox.pencil/{z}/{x}/{y}.png?access_token={请输入token}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/2019_07_30_19_51_31.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "mapbox_pirates",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//c.tiles.mapbox.com/v4/mapbox.pirates/{z}/{x}/{y}.png?access_token={请输入token}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/2019_07_30_19_52_10.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "mapbox_emerald",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//c.tiles.mapbox.com/v4/mapbox.emerald/{z}/{x}/{y}.png?access_token={请输入token}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/2019_07_30_19_52_46.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "mapbox_high_contrast",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//c.tiles.mapbox.com/v4/mapbox.high-contrast/{z}/{x}/{y}.png?access_token={请输入token}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/2019_07_30_19_31_09.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "tianditu_image_label",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//t6.tianditu.com/DataServer?T=cia_w&x={x}&y={y}&l={z}&tk={请输入token}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/2020_03_10_12_18_07.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "arcgis在线影像",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//server.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/2019_07_30_19_32_59.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "google_image",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//mt1.google.cn/maps/vt?lyrs=s&x={x}&y={y}&z={z}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/2019_07_30_19_32_45.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "google_image_label",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//mt1.google.cn/maps/vt?lyrs=h&gl=CN&x={x}&y={y}&z={z}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/2019_07_30_19_32_35.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "google_imagewithlabel",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//mt1.google.cn/maps/vt?lyrs=s,h&gl=CN&x={x}&y={y}&z={z}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/2019_07_30_19_32_22.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "google_map",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//mt1.google.cn/maps/vt?lyrs=m&gl=CN&x={x}&y={y}&z={z}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/20228159552156007.png",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "GeoQ水系",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//thematic.geoq.cn/arcgis/rest/services/ThematicMaps/WorldHydroMap/MapServer/tile/{z}/{y}/{x}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/20228159552156006.png",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "GeoQ中国行政区域",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//thematic.geoq.cn/arcgis/rest/services/ThematicMaps/administrative_division_boundaryandlabel/MapServer/tile/{z}/{y}/{x}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/20228159552156005.png",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "GeoQ彩色",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//map.geoq.cn/ArcGIS/rest/services/ChinaOnlineCommunity/MapServer/tile/{z}/{y}/{x}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/20228159552156004.png",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "GeoQ暖色",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//map.geoq.cn/ArcGIS/rest/services/ChinaOnlineStreetWarm/MapServer/tile/{z}/{y}/{x}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/20228159552156003.png",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "GeoQ灰色",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//map.geoq.cn/arcgis/rest/services/ChinaOnlineStreetGray/MapServer/tile/{z}/{y}/{x}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/20228159552156002.png",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "GeoQ蓝黑",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//map.geoq.cn/arcgis/rest/services/ChinaOnlineStreetPurplishBlue/MapServer/tile/{z}/{y}/{x}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/20228159552156001.png",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "GeoQ英文",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//map.geoq.cn/arcgis/rest/services/ChinaOnlineCommunityENG/MapServer/tile/{z}/{y}/{x}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/002.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "GH影像",
+                "imageryProvider": {
+                    "type": "WebMapTileServiceImageryProvider",
+                    "url": "http://183.223.249.238:3600/services/wgs84/startlvlone/wmts?REQUEST=GetTile&VERSION=1.0.0&SERVICE=wmts&LAYER=geearth&STYLE={style}&TILEMATRIXSET={TileMatrixSet}&TILEMATRIX={TileMatrix}&TILEROW={TileRow}&TILECOL={TileCol}",
+                    "layer": "geearth",
+                    "style": "default",
+                    "tileMatrixSetID": "ge",
+                    "maximumLevel": 19,
+                    "format": "tiles",
+                    "tileMatrixLabels": [
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8",
+                        "9",
+                        "10",
+                        "11",
+                        "12",
+                        "13",
+                        "14",
+                        "15",
+                        "16",
+                        "17",
+                        "18",
+                        "19",
+                        "20"
+                    ],
+                    "tilingScheme": {
+                        "type": "GeographicTilingScheme"
+                    }
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/002.jpg",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "GH影像2",
+                "imageryProvider": {
+                    "type": "WebMapTileServiceImageryProvider",
+                    "url": "//183.223.249.238:8094/base/services/wgs84/startlvlone/wmts?REQUEST=GetTile&version=1.0.0&service=wmts&layer=geearth&style={style}&TILEMATRIXSET={TileMatrixSet}&TILEMATRIX={TileMatrix}&TILEROW={TileRow}&TILECOL={TileCol}",
+                    "layer": "geearth",
+                    "style": "default",
+                    "tileMatrixSetID": "ge",
+                    "maximumLevel": 19,
+                    "format": "tiles",
+                    "tileMatrixLabels": [
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8",
+                        "9",
+                        "10",
+                        "11",
+                        "12",
+                        "13",
+                        "14",
+                        "15",
+                        "16",
+                        "17",
+                        "18",
+                        "19",
+                        "20"
+                    ],
+                    "tilingScheme": {
+                        "type": "GeographicTilingScheme"
+                    }
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/yx.png",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "星图地球影像",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//tiles1.geovisearth.com/base/v1/img/{z}/{x}/{y}?format=webp&tmsIds=w&token={请输入token}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/zj.png",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "星图地球影像地图注记",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//tiles1.geovisearth.com/base/v1/cia/{z}/{x}/{y}?format=png&tmsIds=w&token={请输入token}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/yun.png",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "星图地球地形晕渲",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//tiles1.geovisearth.com/base/v1/ter/{z}/{x}/{y}?format=png&tmsIds=w&token={请输入token}"
+                }
+            }
+        },
+        {
+            "thumbnail": "/imagery/zhu.png",
+            "sceneObjectJson": {
+                "type": "CzmImagery",
+                "name": "星图地球地形注记",
+                "imageryProvider": {
+                    "type": "UrlTemplateImageryProvider",
+                    "url": "//tiles1.geovisearth.com/base/v1/cat/{z}/{x}/{y}?format=png&tmsIds=w&token={请输入token}"
+                }
+            }
+        }
+    ]
+}
