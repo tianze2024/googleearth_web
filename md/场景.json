@@ -1,0 +1,232 @@
+{
+    "asset": {
+        "version": "0.1.0",
+        "createdTime": "2022-06-17T05:54:41.744Z",
+        "modifiedTime": "2024-02-20T10:30:42.459Z",
+        "name": "基础场景"
+    },
+    "sceneTree": {
+        "root": {
+            "children": [
+                {
+                    "name": "基础场景",
+                    "children": [
+                        {
+                            "name": "地球窗口",
+                            "collapsed": true,
+                            "sceneObj": {
+                                "id": "0e5a5eb7-8c3c-44f7-b5bd-e53821c7d315",
+                                "type": "CzmViewer",
+                                "actived": true,
+                                "name": "地球窗口",
+                                "ref": "v",
+                                "createCesiumViewerFuncStr": "async function initCesiumViewer(container, czmViewer) {\n    const viewer = await XE2.g.defaultCreateCesiumViewerFunc(container, czmViewer);\n\n    // 若原Czm版权信息展示位置遮挡重要信息，可将以下语句解注释，在别的位置展示\n     viewer._cesiumWidget._creditContainer.style.display = \"none\";\n\n    return viewer;\n}\n",
+                                "clockCurrentTime": 1708424110547
+                            },
+                            "children": []
+                        },
+                        {
+                            "name": "谷歌影像",
+                            "collapsed": true,
+                            "sceneObj": {
+                                "id": "e211f45f-bed9-4898-8ae4-8f4ba7cba447",
+                                "type": "CzmImagery",
+                                "imageryProvider": {
+                                  "type": "ESImageryLayer",
+                                    "wgs84": true,
+                                    "url": "https://server.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/tile/{z}/{x}/{y}"
+                                },
+                                "name": "谷歌影像"
+                            },
+                            "children": []
+                        },
+                        {
+                            "name": "状态栏",
+                            "sceneObj": {
+                                "id": "dd8b82a0-9d4b-4e33-9cea-7f9d116e670d",
+                                "type": "ESViewerStatusBarScale",
+                                "name": "状态栏",
+                                "bgColor": [
+                                    0.1607843137254902,
+                                    0.16862745098039217,
+                                    0.1843137254901961,
+                                    0.8
+                                ]
+                            },
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "图标",
+                    "sceneObj": {
+                        "id": "fd734eb6-2973-422c-92ab-a8f1d50cb59d",
+                        "type": "ESImageLabel",
+                        "position": [
+                            110.58552612291129,
+                            33.93916931926905,
+                            1.3969838619232178e-9
+                        ],
+                        "name": "图标",
+                        "allowPicking": true
+                    },
+                    "children": []
+                },
+                {
+                    "name": "文字",
+                    "sceneObj": {
+                        "id": "f5814fe4-2cdc-4ab6-a8f0-919717b58662",
+                        "type": "ESGeoDivTextPoi",
+                        "text": "请输入文字",
+                        "textEditingInteraction": true,
+                        "position": [
+                            113.21979280282926,
+                            33.39817004400075,
+                            0
+                        ],
+                        "name": "文字",
+                        "allowPicking": true
+                    },
+                    "children": []
+                },
+                {
+                    "name": "线段",
+                    "sceneObj": {
+                        "id": "d483b79b-f4b5-4c98-b239-881f39dcf214",
+                        "type": "GeoPolyline",
+                        "allowPicking": true,
+                        "positions": [
+                            [
+                                114.19367498155238,
+                                34.88032380239958,
+                                9.313225746154785e-10
+                            ],
+                            [
+                                114.45049126839206,
+                                32.868095103534536,
+                                9.313225746154785e-10
+                            ],
+                            [
+                                112.36571625531649,
+                                31.887726268143204,
+                                9.313225746154785e-10
+                            ],
+                            [
+                                109.68262891585697,
+                                33.38273367645474,
+                                0
+                            ]
+                        ],
+                        "name": "线段"
+                    },
+                    "children": []
+                },
+                {
+                    "name": "多边形",
+                    "sceneObj": {
+                        "id": "2c60f19a-afdc-456f-8855-1824c0f0e784",
+                        "type": "GeoPolygon",
+                        "name": "多边形",
+                        "allowPicking": true,
+                        "positions": [
+                            [
+                                107.13340307988967,
+                                34.35991490773695,
+                                0.5465745682877111
+                            ],
+                            [
+                                107.72721573038423,
+                                32.14941226930367,
+                                0
+                            ],
+                            [
+                                109.21081634446088,
+                                34.68806498989298,
+                                0
+                            ]
+                        ]
+                    },
+                    "children": []
+                },
+                {
+                    "name": "圆形",
+                    "sceneObj": {
+                        "id": "dcaec3cc-d8ca-4c22-91e3-754093dd0393",
+                        "type": "ESLocalCircle",
+                        "position": [
+                            108.6380992867559,
+                            35.652277882352124,
+                            0
+                        ],
+                        "name": "圆形",
+                        "collision": false,
+                        "allowPicking": true,
+                        "filled": true,
+                        "fillStyle": {
+                            "color": [
+                                1,
+                                1,
+                                1,
+                                0.5
+                            ],
+                            "material": "",
+                            "materialParams": {},
+                            "ground": false
+                        }
+                    },
+                    "children": []
+                },
+                {
+                    "name": "测量距离",
+                    "sceneObj": {
+                        "id": "f3500c0a-1f3f-489d-848c-622b5d14cc37",
+                        "type": "GeoDistanceMeasurement",
+                        "allowPicking": true,
+                        "positions": [
+                            [
+                                111.34951200986168,
+                                36.794989836229966,
+                                9.313225746154785e-10
+                            ],
+                            [
+                                112.10335500183092,
+                                35.62831162757598,
+                                9.313225746154785e-10
+                            ]
+                        ],
+                        "name": "测量距离"
+                    },
+                    "children": []
+                },
+                {
+                    "name": "测量面积",
+                    "sceneObj": {
+                        "id": "b940d94d-cf0f-4807-87be-5da46f2873bd",
+                        "type": "GeoAreaMeasurement",
+                        "allowPicking": true,
+                        "positions": [
+                            [
+                                113.45407848231905,
+                                36.48279664251019,
+                                9.313225746154785e-10
+                            ],
+                            [
+                                114.42699404844474,
+                                35.47235947917771,
+                                0
+                            ],
+                            [
+                                115.68298393887592,
+                                36.54996948524836,
+                                9.313225746154785e-10
+                            ]
+                        ],
+                        "editing": true,
+                        "name": "测量面积"
+                    },
+                    "children": []
+                }
+            ]
+        }
+    }
+}

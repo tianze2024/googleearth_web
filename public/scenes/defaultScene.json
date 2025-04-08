@@ -1,0 +1,56 @@
+{
+    "asset": {
+        "version": "0.1.0",
+        "createdTime": "2022-06-17T05:54:41.744Z",
+        "modifiedTime": "2023-06-17T09:58:11.047Z",
+        "name": "基础场景"
+    },
+    "sceneTree": {
+        "root": {
+            "children": [
+                {
+                    "name": "Cesium基础场景",
+                    "children": [
+                        {
+                            "name": "默认视口",
+                            "sceneObj": {
+                                "id": "0e5a5eb7-8c3c-44f7-b5bd-e53821c7d315",
+                                "ref": "v",
+                                "type": "CzmViewer",
+                                "actived": true,
+                                "name": "默认视口",
+                                "globeDepthTestAgainstTerrain": false,
+                                "globeEnableLighting": false,
+                                "sunShow": true,
+                                "sunGlowFactor": 1,
+                                "moonShow": true,
+                                "moonTextureUrl": "",
+                                "moonOnlySunLighting": true,
+                                "skyBoxShow": true,
+                                "fogEnabled": true,
+                                "fogDensity": 0.0002,
+                                "fogScreenSpaceErrorFactor": 2,
+                                "fogMinimumBrightness": 0.03
+                            },
+                            "children": []
+                        },
+                        {
+                            "name": "离线影像",
+                            "sceneObj": {
+                                "id": "1c86e136-789a-4a5c-abc6-93cb0fd01957",
+                                "type": "CzmImagery",
+                                "imageryProvider": {
+                                    "type": "TileMapServiceImageryProvider",
+                                    "url": "${czm-path}/Assets/Textures/NaturalEarthII"
+                                },
+                                "zIndex": 0,
+                                "name": "离线影像"
+                            },
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
