@@ -1,4 +1,6 @@
 # 使用 Vue 和 EarthSDK 实现谷歌地球网页版
+web:https://tianze2024.github.io/googleearth_web/
+
 ## 🎯 项目简介
 本项目旨在基于 Vue 和 EarthSDK 实现一个类似谷歌地球网页版的三维地球应用，支持以下功能：
 
